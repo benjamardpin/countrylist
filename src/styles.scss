@@ -1,7 +1,8 @@
-@import '~bootstrap/scss/bootstrap';
 
 $background-color: #f3f3f3;
 
 body {
     background-color: $background-color;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
