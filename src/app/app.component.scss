@@ -1,3 +1,28 @@
+$blue-color: rgb(101, 198, 255);
+$active-color: rgb(4, 111, 129);
 .content {
-    padding: 16px;
+    padding: 36px;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $blue-color;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    padding-left: 36px;
+  }
+
+  .active {
+    background-color: $active-color;
+  }

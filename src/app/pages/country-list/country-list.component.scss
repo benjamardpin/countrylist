@@ -1,0 +1,21 @@
+$blue-color: rgb(101, 198, 255);
+$active-color: rgb(4, 111, 129);
+$gray-color: rgb(191, 225, 231);
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: $active-color;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid $gray-color;
+  }
+
+  .input-width {
+      width: 100%;
+  }

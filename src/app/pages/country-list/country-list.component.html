@@ -1,12 +1,12 @@
 <div class="table-responsive" *ngIf="countries">
   <div class="example-form">
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="input-width">
       <mat-label>Search country .. </mat-label>
       <input matInput class="searching-customer" type="text"  placeholder="Search" [(ngModel)]="searchModel" onchange="updateSearchModel($event)" />
     </mat-form-field>
   </div>
     <table class="table table-striped">
-      <thead>
+      <thead class="header">
         <tr>
           <th>Name</th>
           <th>Region</th>

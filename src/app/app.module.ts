@@ -10,6 +10,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SearchPipe } from './pages/country-list/search.pipe';
 import { MatInputModule } from '@angular/material/input'
+import { MatToolbarModule } from '@angular/material/toolbar'
 @NgModule({
   declarations: [
     AppComponent,
