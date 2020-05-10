@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "countrylist"
+    }
+  },
+  "defaultProject": "countrylist",
+  "cli": {
+    "analytics": false
+  }
 }
