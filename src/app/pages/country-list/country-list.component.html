@@ -1,14 +1,30 @@
-<div class="container">
-    <input id="inputSearch" type="text" placeholder="Search products" class="search-textfield" (keyup)="searchProduct($event.target.value)">
-    <div class="card">
-        <div class="card-header">
-            Quote
-        </div>
-        <div class="card-body">
-            <blockquote class="blockquote mb-0">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-            </blockquote>
-        </div>
-    </div>
-</div>
+<div class="table-responsive" *ngIf="countries">
+  <div class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Search country .. </mat-label>
+      <input matInput class="searching-customer" type="text"  placeholder="Search" [(ngModel)]="searchModel" onchange="updateSearchModel($event)" />
+    </mat-form-field>
+  </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Region</th>
+          <th>Sub Region</th>
+          <th>Population</th>
+          <th>Coordinate</th>
+          <th>Native Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let country of countries | searchFilter: searchModel">
+          <td>{{country.name}}</td>
+          <td>{{country.region}}</td>
+          <td>{{country.subregion}}</td>
+          <td>{{country.population}}</td>
+          <td>{{country.latlng}}</td>
+          <td>{{country.nativeName}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
