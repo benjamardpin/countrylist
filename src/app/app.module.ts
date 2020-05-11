@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { CountryListComponent } from './pages/country-list/country-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SearchPipe } from './pages/country-list/search.pipe';
 import { MatInputModule } from '@angular/material/input'
-import { MatToolbarModule } from '@angular/material/toolbar'
+import { CountryService } from './services/country.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +25,11 @@ import { MatToolbarModule } from '@angular/material/toolbar'
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CountryService],
+  bootstrap: [AppComponent],
+  exports: [MatFormFieldModule, MatInputModule]
 })
 export class AppModule { }

@@ -15,7 +15,7 @@
       "es2018",
       "dom"
     ],
-    "types": ["webrtc"]
+    "types": ["webrtc", "jasmine"]
 
   },
   "angularCompilerOptions": {
