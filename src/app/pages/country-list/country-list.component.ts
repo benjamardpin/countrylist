@@ -14,7 +14,6 @@ export class CountryListComponent implements OnInit {
   ngOnInit(): void {
     this.countryService.getCountries().subscribe((countries) => {
       this.countries = countries;
-      console.log(countries)
     })
   }
   updateSearchModel(value) {
